@@ -77,7 +77,7 @@ class Gaode(unittest.TestCase):
 if __name__ == '__main__':
     # unittest.main()
     suit = unittest.TestSuite()
-    suit.addTest(unittest.TestLoader().loadTestsFromName("Runner.Gaode.test_02_walking_path_3"))
+    suit.addTest(unittest.TestLoader().loadTestsFromName("Runner.Gaode"))
     nowtime = datetime.datetime.today().strftime("%Y-%m-%d %H.%M.%S")
     file = open(f"./{nowtime}_report.html", "wb")
     runner = HTMLTestRunner(stream=file, verbosity=2, title="高德地图接口测试报告", description="地理编码接口、路径规划接口、天气查询接口")
