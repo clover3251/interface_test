@@ -70,7 +70,6 @@ class Gaode(unittest.TestCase):
         interface = case["interface"]
         result = self.GaoDe.weather(interface, case)
         self.common(case, result=result)
-        print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
         print("*" * 50, f"test_03_geo结束", "*" * 50)
 
 
