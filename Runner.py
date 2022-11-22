@@ -42,7 +42,7 @@ class Gaode(unittest.TestCase):
     def tearDownClass(cls) -> None:
         pass
 
-    # @unittest.skip
+    @unittest.skip
     @data(*gaode_interface.load_cases("./cases.xlsx", "Geo"))  # 从excel读取case
     # @data(*gaode_interface.case_from_mysql("interface_cases", "cases_geo"))  # 从mysql中读取case
     def test_01_geo(self, case):
@@ -52,7 +52,7 @@ class Gaode(unittest.TestCase):
         self.common(case, result=result)
         print("*" * 50, f"test_01_geo结束", "*" * 50)
 
-    # @unittest.skip
+    @unittest.skip
     # @data(*gaode_interface.load_cases("./cases.xlsx", "Walking path"))
     @data(*gaode_interface.case_from_mysql("interface_cases", "cases_walking"))  # 从mysql中读取case
     def test_02_walking_path(self, case):
