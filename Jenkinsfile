@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    withGroovy {
-        System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","")
-}
     stages {
         stage('高德api_state'){
             steps{
@@ -12,6 +9,9 @@ pipeline{
     }
     post {
         always {
+            withGroovy {
+                System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","")
+}
             emailext attachLog: true,
             body: '${FILE,path="jenkins_mail_report_template.html"}',
             subject: 'pipeline test mail',
