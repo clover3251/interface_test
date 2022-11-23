@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    withGroovy {
+        System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","")
+}
     stages {
         stage('高德api_state'){
             steps{
@@ -15,5 +18,4 @@ pipeline{
             to: 'zitao@cisco.com,taoziqiang11@sina.com'
         }
     }
-
 }
