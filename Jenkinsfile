@@ -10,7 +10,7 @@ pipeline{
     post {
         always {
             withGroovy {
-                System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","")
+                'System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","")'
 }
             emailext attachLog: true,
             body: '${FILE,path="jenkins_mail_report_template.html"}',
